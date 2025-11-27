@@ -103,7 +103,7 @@ if ($recept_id) {
     $params[] = $recept_id;
 }
 
-$sql .= "ORDER BY RAND() LIMIT 10";
+$sql .= "ORDER BY RANDOM() LIMIT 10";
 
 $stmt = $conn->prepare($sql);
 $stmt->execute($params);
